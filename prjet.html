@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boutique de Mode</title>
+    <!-- Lien vers Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Lien vers le fichier CSS personnalisé -->
+    <style>
+        /* Style général de la page */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9; /* Couleur de fond douce */
+            margin: 0;
+            padding: 0;
+        }
+
+        /* En-tête */
+        header {
+            background-color: #343a40;
+            padding: 20px 0;
+        }
+        .navbar-brand {
+            color: #fff;
+            font-size: 30px;
+            font-weight: bold;
+        }
+        .navbar-nav .nav-link {
+            color: #fff;
+        }
+        .navbar-nav .nav-link:hover {
+            color: #f39c12;
+        }
+
+        /* Section Hero */
+        .hero {
+            background: linear-gradient(to right, #ff7e5f, #feb47b); /* Dégradé stylé */
+            color: white;
+            text-align: center;
+            padding: 120px 0;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+        .hero .btn {
+            background-color: #f39c12;
+            color: white;
+            padding: 12px 20px;
+            font-size: 1rem;
+            border: none;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        .hero .btn:hover {
+            background-color: #e67e22;
+        }
+
+        /* Section Produits */
+        .product-card {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border: none;
+            margin-bottom: 30px;
+            border-radius: 8px;
+        }
+        .product-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px 8px 0 0;
+        }
+        .product-title {
+            font-size: 1.5rem;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+        .product-description {
+            font-size: 1rem;
+            color: #777;
+            margin-top: 10px;
+        }
+        .product-price {
+            font-size: 1.2rem;
+            color: #e67e22;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        .product-btn {
+            background-color: #f39c12;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            border-radius: 5px;
+        }
+        .product-btn:hover {
+            background-color: #e67e22;
+        }
+
+        /* Pied de page */
+        footer {
+            background-color: #343a40;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        footer a:hover {
+            color: #f39c12;
+        }
+
+        /* Réactivité */
+        @media (max-width: 768px) {
+            .product-card {
+                margin-bottom: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- En-tête avec navigation -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <a class="navbar-brand" href="#">Boutique Mode</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#products">Produits</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">À propos</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Section Hero -->
+    <section class="hero">
+        <h1>Bienvenue à la Boutique Mode</h1>
+        <p>Découvrez les dernières tendances en matière de mode et de confort</p>
+        <a href="#products" class="btn">Voir les produits</a>
+    </section>
+
+    <!-- Section des produits -->
+    <section id="products" class="container py-5">
+        <h2 class="text-center mb-4">Nos Produits</h2>
+        <div class="row">
+            <!-- Pantalon -->
+            <div class="col-md-3 col-sm-6">
+                <div class="card product-card">
+                    <img src="pantalon.jpg" class="card-img-top product-img" alt="Pantalon">
+                    <div class="card-body">
+                        <h5 class="card-title product-title">Pantalon Chino</h5>
+                        <p class="card-text product-description">Un pantalon chino confortable et élégant, idéal pour toutes les occasions.</p>
+                        <p class="product-price">€49,99</p>
+                        <button class="product-btn">Acheter maintenant</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Jean -->
+            <div class="col-md-3 col-sm-6">
+                <div class="card product-card">
+                    <img src="jean.jpg" class="card-img-top product-img" alt="Jean">
+                    <div class="card-body">
+                        <h5 class="card-title product-title">Jean Slim Fit</h5>
+                        <p class="card-text product-description">Un jean slim fit avec une coupe moderne et un confort optimal.</p>
+                        <p class="product-price">€59,99</p>
+                        <button class="product-btn">Acheter maintenant</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Bottes -->
+            <div class="col-md-3 col-sm-6">
+                <div class="card product-card">
+                    <img src="botes.jpg" class="card-img-top product-img" alt="Bottes">
+                    <div class="card-body">
+                        <h5 class="card-title product-title">Bottes en Cuir</h5>
+                        <p class="card-text product-description">Des bottes en cuir robustes, parfaites pour l'hiver et les journées fraîches.</p>
+                        <p class="product-price">€89,99</p>
+                        <button class="product-btn">Acheter maintenant</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Veste -->
+            <div class="col-md-3 col-sm-6">
+                <div class="card product-card">
+                    <img src="veste cuir.jpg" class="card-img-top product-img" alt="Veste">
+                    <div class="card-body">
+                        <h5 class="card-title product-title">Veste en Cuir</h5>
+                        <p class="card-text product-description">Une veste en cuir de haute qualité pour un look chic et intemporel.</p>
+                        <p class="product-price">€149,99</p>
+                        <button class="product-btn">Acheter maintenant</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Jacket (toujours dans les produits) -->
+            <div class="col-md-3 col-sm-6">
+                <div class="card product-card">
+                    <img src="jacket.jpg" class="card-img-top product-img" alt="Jacket">
+                    <div class="card-body">
+                        <h5 class="card-title product-title">Jacket d'Hiver</h5>
+                        <p class="card-text product-description">Une jacket confortable pour vous garder au chaud tout l'hiver.</p>
+                        <p class="product-price">€120,00</p>
+                        <button class="product-btn">Acheter maintenant</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Nike Air Forces (toujours dans les produits) -->
+            <div class="col-md-3 col-sm-6">
+                <div class="card product-card">
+                    <img src="nike.jpg" class="card-img-top product-img" alt="Nike Air Forces">
+                    <div class="card-body">
+                        <h5 class="card-title product-title">Nike Air Forces</h5>
+                        <p class="card-text product-description">Les célèbres baskets Nike Air Forces pour un look sportif et décontracté.</p>
+                        <p class="product-price">€99,99</p>
+                        <button class="product-btn">Acheter maintenant</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pied de page -->
+    <footer>
+        <p>&copy; 2025 Boutique Mode | Tous droits réservés.</p>
+        <p>Suivez-nous sur nos réseaux sociaux !</p>
+        <div>
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">Twitter</a>
+        </div>
+    </footer>
+
+    <!-- Scripts Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
